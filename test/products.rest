@@ -1,0 +1,34 @@
+@base_url = http://localhost:4000
+
+### Get all products
+GET {{base_url}}/users/68fe1c65834fe90aeef39df1/products
+
+
+### Get product by ID
+GET {{base_url}}/users/68fe1c65834fe90aeef39df1/products/68fe1c65834fe90aeef39df1
+
+### Create new product
+POST {{base_url}}/users/68fe1c65834fe90aeef39df1/products
+Content-Type: application/json
+
+{
+  "name": "Product 1",
+  "quantity": 10,
+  "price": 100,
+  "total": 1000
+}
+
+### Update product
+PUT {{base_url}}/users/68fe1c65834fe90aeef39df1/products/68fe1c65834fe90aeef39df1
+Content-Type: application/json
+
+{
+  "name": "Product 1",
+  "quantity": 10,
+  "price": 100,
+  "total": 1000
+}
+
+### Delete product
+DELETE {{base_url}}/users/68fe1c65834fe90aeef39df1/products/68fe1c65834fe90aeef39df1
+

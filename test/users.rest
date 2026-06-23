@@ -1,0 +1,33 @@
+@base_url = http://localhost:4000
+
+### Get all users
+GET {{base_url}}/users
+
+
+### Get user by ID
+GET {{base_url}}/users/68fe1c65834fe90aeef39df1
+
+### Create new user
+POST {{base_url}}/users
+Content-Type: application/json
+
+{
+  "name": "John Doe",
+  "email": "john@example.com", 
+  "password": "password123",
+  "role": "user",
+  "status": "active"
+}
+
+### Update user
+PUT {{base_url}}/users/68fe1c65834fe90aeef39df1
+Content-Type: application/json
+
+{
+  "name": "John Smith",
+  "email": "john.smith@example.com"
+}
+
+### Delete user
+DELETE {{base_url}}/users/68fe1c65834fe90aeef39df1
+
